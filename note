@@ -1,0 +1,17 @@
+// a^(b^c)
+ll pw(ll a,ll b,ll m)
+{
+    if(b==0) return 1;
+    ll tmp=pw(a,b/2,m);
+    if(b%2==0) return tmp*tmp%m;
+    else return tmp*tmp %m *a %m;
+}
+
+void sol()
+{
+    ll tmp=pw(b,c,MOD-1);
+    cout<<pw(a,tmp,MOD)<<el;
+}
+
+
+nếu số mũ tràn thì MOD-1;
